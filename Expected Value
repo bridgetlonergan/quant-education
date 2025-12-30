@@ -1,0 +1,42 @@
+Expected Value (E[X])
+
+Overview
+
+If an individual repeated the same uncertain decision under the same rules, they can determine the average gain or loss through calculating the expected value. While single outcomes may differ from the expected value, the average result converges towards it over repetitions. The idea of expected value is foundational in probability, economics, and finance.
+
+In the Context of Trading
+
+In trading, expected value reframes how to think about a setup, or a repeatable trade defined by specific entry, exit, and risk rules. The relevant question is not whether the next trade will win, but whether the setup makes money across many trades. A setup has positive expected value if, over time, winning trades more than offset losing ones. If they do not, the strategy is unprofitable, even if individual trades feel successful.
+To formalize this, outcomes are represented numerically using a random variable. A random variable assigns a number to each possible outcome of an uncertain process. For example, a coin flip might assign 1 to heads and 0 to tails, a die assigns values from 1 through 6, and a trade might assign +2R to a win and −1R to a loss. Once outcomes are expressed as numbers, averages can be meaningfully discussed.
+In the discrete case, expected value is a weighted average of all possible outcomes. A random variable can take several possible values, denoted Ri​ (where the subscript i simply labels each outcome), and each value occurs with probability pi. The expected value is thus E[X] = Σ pi · Ri. Outcomes with higher probabilities receive more weight in the average. The formula is simple, but it captures the whole idea behind expected value.
+Most trading decisions can be simplified to wins and losses. In that case, expected value can be written as EV = [ p(win) · R(win) ] − [ p(loss) · R(loss) ], where p(win) is the probability of a winning trade, R(win) is the profit when the trade wins, and R(loss) is the loss when it fails. If EV is positive, the trade is favorable in the long run. If EV is negative, it is not, regardless of how often it wins.
+
+The Common Deception of Winning Often
+
+Suppose a setup wins 40 percent of the time. When it wins, it makes 2R, and when it loses, it loses 1R. The expected value is 
+EV = [ 0.40 · 2R ] − [ 0.60 · 1R ]
+      = 0.8R − 0.6R 
+      = 0.2R
+On average, the trader earns 0.2 units of risk per trade. Individual outcomes are still either +2R or −1R. The average only reveals itself over repetition.
+This highlights several important points. You can lose more often than you win and still have a profitable system. The edge comes from the combination of win rate and payoff, not from either one in isolation. A high win rate by itself guarantees nothing.
+This is why win rate is a common trap, and leads to new traders to focus on accuracy. Professionals, however, focus on expectation. Consider a strategy that wins 70 percent of the time, but loses 3R on losers and makes 1R on winners. Its expected value is [EV = 0.7 · 1R − 0.3 · 3R], which equates to −0.2R, or a losing system. Another strategy that wins only 35 percent of the time, but makes 3R on winners and loses 1R on losers has [EV = 0.35 · 3R − 0.65 · 1R = 0.4R], which is a winning system. The second strategy feels worse emotionally because it loses more often, but it is mathematically superior.
+
+Expected Value ≠ Probable Value
+
+Another common mistake is assuming expected value describes what is most likely to happen. It does not. A trade with a 99 percent chance of losing $1 and a 1 percent chance of winning $200 has expected value E[X] = 0.99(−1) + 0.01(200) = +1.01. You will almost always lose money, yet the average outcome is positive. This distinction explains why casinos make money, why insurance companies exist, and why some profitable strategies feel uncomfortable to trade.
+Expected value is not a prediction tool, but a decision tool. It helps answer whether a trade or strategy is favorable over time, not whether the next instance will work. That distinction is critical for rational decision making under uncertainty.
+In practice, traders do not need perfect probabilities or advanced mathematics to use expected value. They need honest estimates and consistency. Trades should be logged by setup, with consistent rules. After a meaningful sample, win rate and average win and loss can be estimated. A rough calculation like EV ≈ WinRate · AvgWin − (1 − WinRate) · AvgLoss is often enough to identify which setups actually pay.
+Once expected value is estimated, behavior should follow. High expected value setups deserve attention and frequency, while low expected value setups should be reduced, redesigned, or eliminated. Although a positive expected value strategy will still experience losing streaks, it is important to remember that expected value lives in the long run, not in individual outcomes.
+
+Scalability of Expected Value
+
+One reason expected value scales so cleanly is its linearity. The expected value of the sum of strategies is simply the sum of their expected values. This allows complex systems to be broken into basic parts and analyzed independently, which is why expected value is central to portfolio thinking and quantitative finance.
+
+Importance of Risk Management
+
+Expected value tells you the center of outcomes, but it says nothing about how spread out those outcomes are. Two strategies can have the same expected value and feel completely different because of variance. Risk management exists to survive the variability around the average, not to replace expected value.
+
+Conclusion
+
+Many traders misuse expected value by chasing lucky outcomes, overfitting probabilities to narrow conditions, ignoring rare but catastrophic losses, or treating expected value as a guarantee. Expected value is a statement about distributions, not certainty. Its role is to identify edge, not to eliminate randomness.
+At a deeper level, expected value is the backbone of rational trading. It separates outcomes from processes, emotion from structure, and short term noise from long term edge. Once expected value is understood, concepts like risk, sizing, optimization, and system design become much easier to reason about.
